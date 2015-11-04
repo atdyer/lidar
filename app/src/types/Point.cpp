@@ -4,7 +4,11 @@
 
 #include "types/Point.h"
 
-Point::Point() : Point( 0.0, 0.0, 0.0 ) {
+Point::Point() {
+
+    this->x = 0.0;
+    this->y = 0.0;
+    this->z = 0.0;
 
 }
 
