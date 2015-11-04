@@ -1,0 +1,14 @@
+# Makefile used to set up a new system for installation of this software
+
+default:
+
+
+install-packages:
+	@echo No additional packages
+
+
+install-dependencies:
+	@echo No additional dependencies
+
+
+.PHONY: install-packages install-dependencies
