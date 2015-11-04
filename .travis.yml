@@ -5,8 +5,8 @@ compiler:
     - clang
 
 script:
-    - make -f build/system-setup/make-system install-packages
-    - make -f build/system-setup/make-system install-dependencies
-    - mkdir build/build && cd build/build
+    - make -f ci/make-system install-packages
+    - make -f ci/make-system install-dependencies
+    - mkdir build && cd build
     - cmake ..
     - make
