@@ -2,13 +2,19 @@
 // Created by tristan on 11/4/15.
 //
 
-#include "types/Point.h"
+#include <files/LAS.h>
 
 int main( int argc, char** argv) {
 
-    Point p (1.0, 2.0, 3.0);
+    if ( argc == 2 ) {
 
-    p.print();
+        LAS las (argv[1]);
+
+    } else {
+
+        std::cout << "Pass in a .las file to read the header" << std::endl;
+
+    }
 
     return 0;
 
