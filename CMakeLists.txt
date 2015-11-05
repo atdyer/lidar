@@ -16,5 +16,10 @@ add_executable (${EXE_NAME} ${CMAKE_SOURCE_DIR}/app/main.cpp
         app/src/files/LAS.cpp app/include/files/LAS.h app/include/types/Exceptions.h)
 
 # We need C++11
-set_property(TARGET ${EXE_NAME} PROPERTY CXX_STANDARD 11)
-set_property(TARGET ${EXE_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
+if (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER 3.0 )
+    set_property(TARGET ${EXE_NAME} PROPERTY CXX_STANDARD 11)
+    set_property(TARGET ${EXE_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
+else ()
+    SET(CMAKE_CXX_FLAGS "-std=c++0x")   # Old CMake support
+endif ()
+
