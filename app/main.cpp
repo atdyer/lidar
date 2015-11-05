@@ -2,13 +2,16 @@
 // Created by tristan on 11/4/15.
 //
 
+#include <files/LAS.h>
 #include "types/Point.h"
 
 int main( int argc, char** argv) {
 
-    Point p (1.0, 2.0, 3.0);
+    if ( argc == 2 ) {
 
-    p.print();
+        LAS las (argv[1]);
+
+    }
 
     return 0;
 

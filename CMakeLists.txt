@@ -12,4 +12,5 @@ include_directories(app/include)
 
 # Add executables
 add_executable (${EXE_NAME} ${CMAKE_SOURCE_DIR}/app/main.cpp
-        app/src/types/Point.cpp app/include/types/Point.h)
+        app/src/types/Point.cpp app/include/types/Point.h
+        app/src/files/LAS.cpp app/include/files/LAS.h app/include/types/Exceptions.h)
