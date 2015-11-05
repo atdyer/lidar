@@ -3,13 +3,16 @@
 //
 
 #include <files/LAS.h>
-#include "types/Point.h"
 
 int main( int argc, char** argv) {
 
     if ( argc == 2 ) {
 
         LAS las (argv[1]);
+
+    } else {
+
+        std::cout << "Pass in a .las file to read the header" << std::endl;
 
     }
 

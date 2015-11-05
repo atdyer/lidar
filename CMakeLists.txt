@@ -14,3 +14,7 @@ include_directories(app/include)
 add_executable (${EXE_NAME} ${CMAKE_SOURCE_DIR}/app/main.cpp
         app/src/types/Point.cpp app/include/types/Point.h
         app/src/files/LAS.cpp app/include/files/LAS.h app/include/types/Exceptions.h)
+
+# We need C++11
+set_property(TARGET ${EXE_NAME} PROPERTY CXX_STANDARD 11)
+set_property(TARGET ${EXE_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
